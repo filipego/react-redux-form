@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ScrollToTop from './ScrollToTop';
+import React, { Component } from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import ScrollToTop from './ScrollToTop'
 
-import NotFound from './NotFound';
-import Home from './Home';
+import NotFound from './NotFound'
+import Home from './Home' 
 
 
 class App extends Component {

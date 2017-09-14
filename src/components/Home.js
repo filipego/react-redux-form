@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import ContactForm from '../containers/ContactForm'
 
 class Content extends Component {
 
   render() {
     return (
       <div>
-        <h2>hello app</h2>
+        <h2>Contact Form</h2>
+        <ContactForm />
       </div>
     );
   }
