@@ -1,10 +1,32 @@
 import React from 'react'
-import { Field, reduxForm } from 'redux-form'
+import { Field, reduxForm, SubmissionError } from 'redux-form'
 
 
-const submit = (values) => {
-  console.log('sumbit inside form')
-  console.log(values)
+const submit = ({ firstName = "", lastName = "", email = "" }) => {
+  let error = {};
+  let isError = false;
+
+  if(firstName.trim() === ""){
+    error.firstName = "Required";
+    isError = true;
+  }
+
+  if(lastName.trim() === ""){
+    error.lastName = "Required";
+    isError = true;
+  }
+
+  if(email.trim() === ""){
+    error.email = "Required";
+    isError = true;
+  }
+
+  if(isError) {
+    throw new SubmissionError(error)
+  } else {
+    // submit for to server
+    console.log("Form submitted successfuly");
+  }
 }
 
 const renderField = ({ label, input, type, meta: { touched, error } }) => (
