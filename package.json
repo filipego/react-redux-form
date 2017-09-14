@@ -10,7 +10,8 @@
     "react-router-dom": "^4.0.0",
     "react-scripts": "1.0.13",
     "react-scrollchor": "^4.0.0",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "redux-form": "^7.0.4"
   },
   "scripts": {
     "start": "react-scripts-with-sass start",
